@@ -1,0 +1,599 @@
+# MASTER PROMPT
+
+You are an award-winning Senior UI/UX Designer, Senior Frontend Engineer, SEO Specialist, Accessibility Expert, and E-commerce Website Developer.
+
+Your task is to design and develop a premium, production-quality cosmetic e-commerce website called **Ana's Cosmetics**.
+
+The website must be visually stunning, luxury-inspired, modern, elegant, fast, responsive, conversion-focused, and fully deployable on GitHub Pages.
+
+## IMPORTANT TECHNICAL REQUIREMENTS
+
+This website MUST be built using ONLY:
+
+* HTML5
+* CSS3
+* Vanilla JavaScript (ES6)
+
+DO NOT use:
+
+* React
+* Vue
+* Angular
+* Next.js
+* PHP
+* Node.js
+* Express
+* Databases
+* Server-side rendering
+* APIs that require authentication
+
+The website must run by simply opening index.html or hosting the files on GitHub Pages.
+
+Everything should work without a backend.
+
+---
+
+## PROJECT STRUCTURE
+
+Create a clean professional folder structure.
+
+/
+│
+├── index.html
+├── about.html
+├── services.html
+├── shop.html
+├── contact.html
+├── faq.html
+├── privacy.html
+├── testimonials.html
+│
+├── assets/
+│   ├── css/
+│   ├── js/
+│   ├── images/
+│   ├── icons/
+│   └── logo/
+│
+├── products/
+│   ├── product1.html
+│   ├── product2.html
+│   └── ...
+│
+├── sitemap.xml
+├── robots.txt
+├── favicon.ico
+└── README.md
+
+---
+
+## BRANDING
+
+Business Name:
+
+Ana's Cosmetics
+
+Generate:
+
+* Professional luxury logo
+* Elegant tagline
+* Company description
+
+Year Established:
+
+2025
+
+The branding should feel similar to premium beauty brands.
+
+The colour palette should communicate:
+
+* Luxury
+* Beauty
+* Elegance
+* Trust
+* Femininity
+* Modern design
+
+Choose colours professionally.
+
+Use premium typography.
+
+Spacing should be clean.
+
+Rounded corners.
+
+Soft shadows.
+
+Glassmorphism where appropriate.
+
+Modern animations.
+
+Micro interactions.
+
+---
+
+## WEBSITE PAGES
+
+Build:
+
+Home
+
+Shop
+
+Product Details
+
+About
+
+Services
+
+Testimonials
+
+FAQ
+
+Contact
+
+Privacy Policy
+
+Every page must have:
+
+Professional navigation
+
+Footer
+
+SEO meta tags
+
+Canonical URL placeholder
+
+Open Graph tags
+
+Twitter Card tags
+
+Structured data where appropriate
+
+---
+
+## HOME PAGE
+
+Create a premium homepage featuring:
+
+Luxury hero section
+
+Large CTA buttons
+
+Elegant cosmetics imagery
+
+Featured collections
+
+Featured products
+
+New arrivals
+
+Best sellers
+
+Shop by category
+
+Brand story
+
+Testimonials
+
+Newsletter
+
+Instagram style gallery
+
+FAQs preview
+
+Contact CTA
+
+Beautiful footer
+
+---
+
+## SHOP
+
+Create an advanced e-commerce catalogue.
+
+Include between 50 and 100 realistic cosmetic products.
+
+Use products inspired by well-known American beauty brands for demonstration purposes, but use legally reusable or placeholder imagery and clearly structured sample product data that can be replaced later.
+
+Every product should have:
+
+Product image
+
+Product name
+
+Category
+
+Price
+
+Old price
+
+Discount badge
+
+Rating
+
+Review count
+
+Short description
+
+Availability
+
+SKU
+
+Brand
+
+Tags
+
+Multiple product images
+
+Product gallery
+
+---
+
+## PRODUCT FEATURES
+
+Search
+
+Filtering
+
+Sorting
+
+Categories
+
+Pagination
+
+Wishlist
+
+Frontend Shopping Cart
+
+Quantity selector
+
+Product zoom
+
+Related products
+
+Recently viewed
+
+Product recommendations
+
+Reviews
+
+Ratings
+
+Product tabs
+
+Breadcrumb navigation
+
+Image gallery
+
+Hover effects
+
+Quick View modal
+
+Sale badges
+
+New badges
+
+Stock indicators
+
+---
+
+## CART
+
+Since there is no backend:
+
+Create a frontend shopping cart using Local Storage.
+
+Allow:
+
+Add to cart
+
+Remove item
+
+Update quantity
+
+Subtotal
+
+Estimated total
+
+Shipping estimate
+
+Coupon input (UI only)
+
+Proceed to WhatsApp button
+
+When user clicks Checkout:
+
+Generate a WhatsApp message containing:
+
+Customer cart
+
+Product names
+
+Quantities
+
+Total
+
+Send to:
+
++1 (415) 283-5219
+
+---
+
+## CONTACT PAGE
+
+Include:
+
+Contact form
+
+Google Map placeholder
+
+Phone
+
+WhatsApp
+
+Email placeholder
+
+Address placeholder
+
+Social icons
+
+Business hours
+
+FAQ shortcut
+
+---
+
+## SERVICES PAGE
+
+Generate beauty-related services professionally.
+
+---
+
+## TESTIMONIALS
+
+Generate realistic customer testimonials.
+
+Include:
+
+Names
+
+Ratings
+
+Photos using royalty-free placeholder portraits
+
+---
+
+## FAQ
+
+Generate useful cosmetic shopping FAQs.
+
+---
+
+## LOGO
+
+Design a modern luxury logo using HTML/CSS/SVG that matches the brand identity.
+
+---
+
+## IMAGES
+
+Use high-quality royalty-free placeholder images suitable for cosmetic products and beauty lifestyle content.
+
+Optimize all images for fast loading.
+
+Implement lazy loading.
+
+---
+
+## UI FEATURES
+
+Sticky navigation
+
+Animated dropdown menus
+
+Smooth scrolling
+
+Scroll animations
+
+Back-to-top button
+
+Dark Mode
+
+Light Mode
+
+Loading animation
+
+Page transitions
+
+Hover animations
+
+Button ripple effects
+
+Image hover effects
+
+Parallax where appropriate
+
+Responsive mobile menu
+
+Floating WhatsApp button
+
+Live chat placeholder
+
+Cookie consent banner
+
+Newsletter popup
+
+---
+
+## RESPONSIVENESS
+
+Perfect responsiveness for:
+
+Desktop
+
+Laptop
+
+Tablet
+
+Mobile
+
+Landscape
+
+Portrait
+
+Use Flexbox and CSS Grid.
+
+---
+
+## PERFORMANCE
+
+Target:
+
+Google Lighthouse
+
+Performance above 90
+
+Accessibility above 95
+
+Best Practices above 95
+
+SEO above 95
+
+Use:
+
+Lazy loading
+
+Minified assets where appropriate
+
+Optimized CSS
+
+Optimized JavaScript
+
+Image optimization
+
+Efficient animations
+
+---
+
+## ACCESSIBILITY
+
+Keyboard navigation
+
+ARIA labels
+
+Proper contrast
+
+Semantic HTML
+
+Alt text
+
+Focus indicators
+
+Screen reader friendly
+
+---
+
+## SEO
+
+Generate:
+
+robots.txt
+
+sitemap.xml
+
+Open Graph tags
+
+Twitter Cards
+
+Meta descriptions
+
+Keywords
+
+Schema.org structured data
+
+Canonical tags
+
+Favicon
+
+Manifest file for PWA readiness
+
+---
+
+## JAVASCRIPT
+
+Organize code into reusable modules.
+
+Use Local Storage for:
+
+Wishlist
+
+Shopping cart
+
+Theme preference
+
+Recently viewed products
+
+Newsletter dismissal
+
+Cookie consent
+
+Search history
+
+Everything should continue working after page refresh.
+
+---
+
+## CODE QUALITY
+
+Professional comments
+
+Clean formatting
+
+Maintainable code
+
+Reusable components
+
+Consistent naming
+
+No duplicated code
+
+Cross-browser compatibility
+
+---
+
+## README
+
+Create a complete README explaining:
+
+Project overview
+
+Folder structure
+
+Customization guide
+
+How to change products
+
+How to edit colours
+
+How to replace images
+
+How to change WhatsApp number
+
+How to deploy on GitHub Pages
+
+---
+
+## FINAL REQUIREMENTS
+
+The final output should be a complete, polished website that looks like it was built by a professional agency.
+
+Every page should feel premium and consistent.
+
+No placeholder lorem ipsum text.
+
+Generate meaningful content throughout.
+
+Ensure there are no broken links, missing assets, or JavaScript errors.
+
+The project should be immediately deployable by uploading the files to a GitHub repository and enabling GitHub Pages, with no additional build steps required.

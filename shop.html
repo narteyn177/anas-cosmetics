@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Shop Ana's Cosmetics - Premium beauty products with advanced filtering and search. Find the perfect cosmetics for your needs.">
+  <meta name="keywords" content="buy cosmetics, beauty products, makeup, skincare, online shopping">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://anas-cosmetics.com/shop.html">
+  <meta property="og:title" content="Shop - Ana's Cosmetics">
+  <meta property="og:description" content="Discover our complete collection of premium cosmetics and beauty products.">
+  <meta property="og:type" content="website">
+
+  <title>Shop - Ana's Cosmetics</title>
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="header-top">
+      <div class="container flex-between">
+        <span>Welcome to Ana's Cosmetics - Premium Beauty Since 2025</span>
+        <div>
+          <a href="tel:+14152835219">📞 +1 (415) 283-5219</a>
+          <a href="mailto:hello@anas-cosmetics.com">✉️ hello@anas-cosmetics.com</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="header-main container">
+      <a href="index.html" class="logo">
+        ✨ Ana's Cosmetics
+      </a>
+
+      <nav class="nav-primary">
+        <a href="index.html">Home</a>
+        <a href="shop.html">Shop</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="testimonials.html">Testimonials</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+
+      <div class="header-actions">
+        <div class="search-box">
+          <input type="text" id="search-input" placeholder="Search products...">
+          <span>🔍</span>
+        </div>
+        
+        <button id="theme-toggle" class="icon-btn" title="Toggle theme">
+          🌙
+        </button>
+
+        <button id="cart-btn" class="icon-btn" title="Shopping cart">
+          🛍️
+          <span id="cart-count"></span>
+        </button>
+
+        <button id="mobile-menu-btn" class="mobile-menu-btn">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Breadcrumb -->
+  <div class="container" style="padding: 1.5rem 0;">
+    <div class="breadcrumb">
+      <a href="index.html">Home</a>
+      <span>/</span>
+      <span>Shop</span>
+    </div>
+  </div>
+
+  <!-- Main Content -->
+  <main class="container" style="display: grid; grid-template-columns: 250px 1fr; gap: 2rem; margin-bottom: 4rem;">
+    <!-- Sidebar Filters -->
+    <aside>
+      <div class="filters-sidebar">
+        <h3 style="margin-bottom: 1.5rem; font-size: 1.25rem;">Filters</h3>
+
+        <!-- Search Filter -->
+        <div class="filter-group">
+          <div class="filter-title">Search</div>
+          <input type="text" id="filter-search" placeholder="Search products..." style="width: 100%; padding: 0.5rem; border: 1px solid var(--neutral-border); border-radius: 0.375rem;">
+        </div>
+
+        <!-- Category Filter -->
+        <div class="filter-group">
+          <div class="filter-title">Category</div>
+          <div id="category-filters"></div>
+        </div>
+
+        <!-- Price Filter -->
+        <div class="filter-group">
+          <div class="filter-title">Price Range</div>
+          <div class="filter-option">
+            <input type="checkbox" id="price-0-25" value="0-25">
+            <label for="price-0-25">$0 - $25</label>
+          </div>
+          <div class="filter-option">
+            <input type="checkbox" id="price-25-50" value="25-50">
+            <label for="price-25-50">$25 - $50</label>
+          </div>
+          <div class="filter-option">
+            <input type="checkbox" id="price-50-100" value="50-100">
+            <label for="price-50-100">$50 - $100</label>
+          </div>
+          <div class="filter-option">
+            <input type="checkbox" id="price-100-plus" value="100+">
+            <label for="price-100-plus">$100+</label>
+          </div>
+        </div>
+
+        <!-- Rating Filter -->
+        <div class="filter-group">
+          <div class="filter-title">Rating</div>
+          <div class="filter-option">
+            <input type="checkbox" id="rating-5" value="5">
+            <label for="rating-5">⭐⭐⭐⭐⭐ 5 Stars</label>
+          </div>
+          <div class="filter-option">
+            <input type="checkbox" id="rating-4" value="4">
+            <label for="rating-4">⭐⭐⭐⭐ 4+ Stars</label>
+          </div>
+          <div class="filter-option">
+            <input type="checkbox" id="rating-3" value="3">
+            <label for="rating-3">⭐⭐⭐ 3+ Stars</label>
+          </div>
+        </div>
+
+        <!-- On Sale Filter -->
+        <div class="filter-group">
+          <div class="filter-option">
+            <input type="checkbox" id="on-sale" value="sale">
+            <label for="on-sale">On Sale</label>
+          </div>
+          <div class="filter-option">
+            <input type="checkbox" id="in-stock" value="stock" checked>
+            <label for="in-stock">In Stock</label>
+          </div>
+        </div>
+
+        <!-- Clear Filters -->
+        <button class="btn btn-ghost btn-block" onclick="clearAllFilters()" style="margin-top: 1rem;">Clear Filters</button>
+      </div>
+    </aside>
+
+    <!-- Products Grid -->
+    <section>
+      <!-- Sort Controls -->
+      <div class="sort-controls" style="margin-bottom: 2rem;">
+        <div style="flex: 1;">
+          <span id="product-count">Showing 60 products</span>
+        </div>
+        <select id="sort-select" onchange="applySorting()">
+          <option value="featured">Featured</option>
+          <option value="newest">Newest</option>
+          <option value="price-low">Price: Low to High</option>
+          <option value="price-high">Price: High to Low</option>
+          <option value="rating">Top Rated</option>
+          <option value="discount">Most Discounted</option>
+        </select>
+      </div>
+
+      <!-- Products Grid -->
+      <div class="grid grid-4" id="products-grid">
+        <!-- Products will be loaded here -->
+      </div>
+
+      <!-- Pagination -->
+      <div class="pagination" id="pagination">
+        <!-- Pagination will be generated here -->
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container footer-content">
+      <div class="footer-section">
+        <h3>About Ana's Cosmetics</h3>
+        <p>Premium beauty products for everyone. Quality, elegance, and luxury redefined.</p>
+        <div class="footer-social">
+          <a href="https://facebook.com/anascosmetics" title="Facebook" target="_blank">f</a>
+          <a href="https://instagram.com/anascosmetics" title="Instagram" target="_blank">📷</a>
+          <a href="https://twitter.com/anascosmetics" title="Twitter" target="_blank">𝕏</a>
+          <a href="https://pinterest.com/anascosmetics" title="Pinterest" target="_blank">📌</a>
+        </div>
+      </div>
+
+      <div class="footer-section">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="shop.html">Shop</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-section">
+        <h3>Customer Service</h3>
+        <ul>
+          <li><a href="#">Shipping Info</a></li>
+          <li><a href="#">Returns & Exchanges</a></li>
+          <li><a href="#">Track Order</a></li>
+          <li><a href="#">Size Guide</a></li>
+          <li><a href="#">Gift Cards</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-section">
+        <h3>Newsletter</h3>
+        <p>Subscribe for exclusive offers and beauty tips.</p>
+        <div class="footer-newsletter">
+          <input type="email" placeholder="Your email">
+          <button>Subscribe</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <p>&copy; 2025 Ana's Cosmetics. All rights reserved.</p>
+      <div>
+        <a href="privacy.html">Privacy Policy</a> | 
+        <a href="#">Terms of Service</a> | 
+        <a href="#">Accessibility</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Cart Sidebar -->
+  <div id="cart-sidebar" class="cart-sidebar">
+    <div class="cart-header">
+      <h3>Shopping Cart</h3>
+      <button class="cart-close">✕</button>
+    </div>
+    <div id="cart-items" class="cart-items">
+      <p style="text-align: center; color: var(--neutral-gray);">Your cart is empty</p>
+    </div>
+    <div class="cart-footer">
+      <div class="cart-summary"></div>
+      <button id="checkout-btn" class="btn btn-primary btn-block" style="margin-top: 1rem;">Proceed to Checkout</button>
+      <button class="btn btn-ghost btn-block" onclick="document.getElementById('cart-sidebar').classList.remove('active')">Continue Shopping</button>
+    </div>
+  </div>
+
+  <!-- Quick View Modal -->
+  <div id="quick-view-modal" class="modal"></div>
+
+  <!-- Scripts -->
+  <script src="assets/js/utils.js"></script>
+  <script src="assets/js/products.js"></script>
+  <script src="assets/js/main.js"></script>
+
+  <!-- Shop Page Specific Script -->
+  <script>
+    let currentPage = 1;
+    const productsPerPage = 12;
+    let filteredProducts = [...PRODUCTS];
+
+    document.addEventListener('DOMContentLoaded', function() {
+      initializeShop();
+    });
+
+    function initializeShop() {
+      // Load categories
+      loadCategories();
+      
+      // Set up event listeners
+      setupFilterListeners();
+      
+      // Load products from URL params
+      loadFromUrlParams();
+      
+      // Initial render
+      renderProducts();
+    }
+
+    function loadCategories() {
+      const container = document.getElementById('category-filters');
+      const categories = getCategories();
+      
+      container.innerHTML = categories.map(cat => `
+        <div class="filter-option">
+          <input type="checkbox" id="cat-${cat}" value="${cat}" class="category-filter">
+          <label for="cat-${cat}">${cat}</label>
+        </div>
+      `).join('');
+    }
+
+    function setupFilterListeners() {
+      // Search filter
+      document.getElementById('filter-search').addEventListener('input', debounce(applyFilters, 300));
+      
+      // Category filters
+      document.querySelectorAll('.category-filter').forEach(checkbox => {
+        checkbox.addEventListener('change', applyFilters);
+      });
+      
+      // Price filters
+      document.querySelectorAll('input[id^="price-"]').forEach(checkbox => {
+        checkbox.addEventListener('change', applyFilters);
+      });
+      
+      // Rating filters
+      document.querySelectorAll('input[id^="rating-"]').forEach(checkbox => {
+        checkbox.addEventListener('change', applyFilters);
+      });
+      
+      // Sale filter
+      document.getElementById('on-sale').addEventListener('change', applyFilters);
+      document.getElementById('in-stock').addEventListener('change', applyFilters);
+    }
+
+    function applyFilters() {
+      currentPage = 1;
+      
+      const searchTerm = document.getElementById('filter-search').value.toLowerCase();
+      const selectedCategories = Array.from(document.querySelectorAll('.category-filter:checked')).map(cb => cb.value);
+      const selectedPrices = Array.from(document.querySelectorAll('input[id^="price-"]:checked')).map(cb => cb.value);
+      const selectedRatings = Array.from(document.querySelectorAll('input[id^="rating-"]:checked')).map(cb => parseInt(cb.value));
+      const onSaleOnly = document.getElementById('on-sale').checked;
+      const inStockOnly = document.getElementById('in-stock').checked;
+
+      filteredProducts = PRODUCTS.filter(product => {
+        // Search filter
+        if (searchTerm && !product.name.toLowerCase().includes(searchTerm) && 
+            !product.description.toLowerCase().includes(searchTerm) &&
+            !product.category.toLowerCase().includes(searchTerm)) {
+          return false;
+        }
+
+        // Category filter
+        if (selectedCategories.length > 0 && !selectedCategories.includes(product.category)) {
+          return false;
+        }
+
+        // Price filter
+        if (selectedPrices.length > 0) {
+          const price = product.price;
+          const matchesPrice = selectedPrices.some(range => {
+            if (range === '0-25') return price >= 0 && price <= 25;
+            if (range === '25-50') return price > 25 && price <= 50;
+            if (range === '50-100') return price > 50 && price <= 100;
+            if (range === '100+') return price > 100;
+            return false;
+          });
+          if (!matchesPrice) return false;
+        }
+
+        // Rating filter
+        if (selectedRatings.length > 0) {
+          const matchesRating = selectedRatings.some(rating => product.rating >= rating);
+          if (!matchesRating) return false;
+        }
+
+        // Sale filter
+        if (onSaleOnly && product.discount === 0) {
+          return false;
+        }
+
+        // Stock filter
+        if (inStockOnly && product.availability !== 'In Stock') {
+          return false;
+        }
+
+        return true;
+      });
+
+      renderProducts();
+    }
+
+    function applySorting() {
+      const sortValue = document.getElementById('sort-select').value;
+      
+      switch(sortValue) {
+        case 'newest':
+          filteredProducts.sort((a, b) => b.id - a.id);
+          break;
+        case 'price-low':
+          filteredProducts.sort((a, b) => a.price - b.price);
+          break;
+        case 'price-high':
+          filteredProducts.sort((a, b) => b.price - a.price);
+          break;
+        case 'rating':
+          filteredProducts.sort((a, b) => b.rating - a.rating);
+          break;
+        case 'discount':
+          filteredProducts.sort((a, b) => b.discount - a.discount);
+          break;
+        default:
+          // Featured - keep original order
+          break;
+      }
+      
+      currentPage = 1;
+      renderProducts();
+    }
+
+    function renderProducts() {
+      const start = (currentPage - 1) * productsPerPage;
+      const end = start + productsPerPage;
+      const pageProducts = filteredProducts.slice(start, end);
+
+      // Update product count
+      document.getElementById('product-count').textContent = `Showing ${filteredProducts.length} product${filteredProducts.length !== 1 ? 's' : ''}`;
+
+      // Render products
+      const grid = document.getElementById('products-grid');
+      if (pageProducts.length === 0) {
+        grid.innerHTML = '<p style="grid-column: 1 / -1; text-align: center; color: var(--neutral-gray);">No products found. Try adjusting your filters.</p>';
+      } else {
+        grid.innerHTML = pageProducts.map(product => createProductCard(product)).join('');
+      }
+
+      // Render pagination
+      renderPagination();
+    }
+
+    function renderPagination() {
+      const totalPages = Math.ceil(filteredProducts.length / productsPerPage);
+      const pagination = document.getElementById('pagination');
+
+      if (totalPages <= 1) {
+        pagination.innerHTML = '';
+        return;
+      }
+
+      let html = '';
+
+      // Previous button
+      if (currentPage > 1) {
+        html += `<a onclick="goToPage(${currentPage - 1})">← Previous</a>`;
+      }
+
+      // Page numbers
+      for (let i = 1; i <= totalPages; i++) {
+        if (i === currentPage) {
+          html += `<button class="active">${i}</button>`;
+        } else if (i <= 3 || i >= totalPages - 2 || Math.abs(i - currentPage) <= 1) {
+          html += `<a onclick="goToPage(${i})">${i}</a>`;
+        } else if (i === 4 || i === totalPages - 3) {
+          html += '<span>...</span>';
+        }
+      }
+
+      // Next button
+      if (currentPage < totalPages) {
+        html += `<a onclick="goToPage(${currentPage + 1})">Next →</a>`;
+      }
+
+      pagination.innerHTML = html;
+    }
+
+    function goToPage(page) {
+      currentPage = page;
+      renderProducts();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    function clearAllFilters() {
+      document.getElementById('filter-search').value = '';
+      document.querySelectorAll('input[type="checkbox"]').forEach(cb => {
+        cb.checked = cb.id === 'in-stock';
+      });
+      applyFilters();
+    }
+
+    function loadFromUrlParams() {
+      const params = new URLSearchParams(window.location.search);
+      const category = params.get('category');
+      const search = params.get('search');
+
+      if (category) {
+        const checkbox = document.getElementById(`cat-${category}`);
+        if (checkbox) checkbox.checked = true;
+      }
+
+      if (search) {
+        document.getElementById('filter-search').value = search;
+      }
+
+      applyFilters();
+    }
+
+    function createProductCard(product) {
+      return `
+        <div class="product-card">
+          <div class="product-image">
+            <img src="${product.image}" alt="${product.name}" loading="lazy">
+            ${product.discount > 0 ? `<div class="product-badge">-${product.discount}%</div>` : ''}
+            ${product.tags.includes('new') ? `<div class="product-badge new">NEW</div>` : ''}
+            <div class="product-overlay">
+              <div class="product-overlay-actions">
+                <button class="btn-quick-view" onclick="openQuickView(${product.id})">Quick View</button>
+                <button class="btn-wishlist" onclick="toggleWishlist(${product.id})">♥</button>
+              </div>
+            </div>
+          </div>
+          <div class="product-info">
+            <div class="product-category">${product.category}</div>
+            <div class="product-name">${product.name}</div>
+            <div class="product-rating">
+              <span class="stars">${'★'.repeat(Math.floor(product.rating))}</span>
+              <span>${product.rating}</span>
+              <span class="review-count">(${product.reviews})</span>
+            </div>
+            <div class="product-price">
+              <span class="price-current">${formatPrice(product.price)}</span>
+              ${product.oldPrice ? `<span class="price-old">${formatPrice(product.oldPrice)}</span>` : ''}
+            </div>
+            <div class="product-actions">
+              <button class="btn-add-cart" onclick="addToCart(${product.id})">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+      `;
+    }
+
+    // Export functions for global use
+    window.goToPage = goToPage;
+    window.clearAllFilters = clearAllFilters;
+    window.applySorting = applySorting;
+  </script>
+
+  <style>
+    @media (max-width: 768px) {
+      main {
+        grid-template-columns: 1fr;
+      }
+
+      aside {
+        display: none;
+      }
+
+      .sort-controls {
+        flex-direction: column;
+      }
+
+      .sort-controls select {
+        width: 100%;
+      }
+    }
+  </style>
+</body>
+</html>
