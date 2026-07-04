@@ -826,7 +826,7 @@ const PRODUCTS = [
   // SETS & BUNDLES
   {
     id: 51,
-    name: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSeGbDQeidlC1c2aMvkegcQWF2ftGHo0dyRLQs3PIJqBPLU8ZHMKZJDm_A&s=10',
+    name: 'Complexion Essentials',
     category: 'Sets',
     price: 125.00,
     oldPrice: 165.00,
