@@ -334,17 +334,17 @@ const PRODUCTS = [
   // SKINCARE
   {
     id: 21,
-    name: 'Luxury Face Cleanser',
+    name: 'La Roche-Posay Effaclar Cleanser',
     category: 'Cleanser',
     price: 38.00,
     oldPrice: 48.00,
-    image: 'https://images.unsplash.com/photo-1556228578-8c89e6adf883?w=400&h=400&fit=crop',
+    image: 'https://thebeautyboxgh.com/wp-content/uploads/2023/03/BD27D97D-0D73-43CF-8385-E25EB866B78A.jpeg.webp',
     rating: 4.6,
     reviews: 201,
     description: 'Gentle yet effective facial cleanser',
     availability: 'In Stock',
     sku: 'LFC-021',
-    brand: 'Ana\'s Cosmetics',
+    brand: 'La Roche-Posay',
     tags: ['skincare', 'cleanser'],
     discount: 21
   },
