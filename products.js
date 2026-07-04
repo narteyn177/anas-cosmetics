@@ -180,7 +180,7 @@ const PRODUCTS = [
     description: 'Luxurious velvet matte lipstick with rich color',
     availability: 'In Stock',
     sku: 'VLS-011',
-    brand: 'Ana\'s Cosmetics',
+    brand: 'MAC',
     tags: ['lipstick', 'lips', 'bestseller'],
     discount: 22
   },
