@@ -625,7 +625,7 @@ const PRODUCTS = [
     brand: 'Ana\'s Cosmetics',
     tags: ['fragrance', 'new'],
     discount: 25
-  },
+  }, 
   {
     id: 39,
     name: 'Scented Candle',
