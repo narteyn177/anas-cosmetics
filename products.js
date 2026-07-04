@@ -616,7 +616,7 @@ const PRODUCTS = [
     category: 'Fragrance',
     price: 18.00,
     oldPrice: 24.00,
-    image: 'https://images.unsplash.com/photo-1585708860210-f45e0e69bb2a?w=400&h=400&fit=crop',
+    image: 'https://www.flameelegancecandles.com/cdn/shop/files/perfume-phalate-free-amber-noir-scent-flame-elegance.jpg?v=1777051549',
     rating: 4.4,
     reviews: 89,
     description: 'Portable fragrance roller for on-the-go',
