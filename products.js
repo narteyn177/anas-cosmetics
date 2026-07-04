@@ -170,11 +170,11 @@ const PRODUCTS = [
   // LIPS
   {
     id: 11,
-    name: 'Velvet Lipstick - Red Carpet',
+    name: 'MAC Matte Lipstick – Ruby Woo (Lipstick)',
     category: 'Lipstick',
     price: 28.00,
     oldPrice: 36.00,
-    image: 'https://images.unsplash.com/photo-1565958011504-819a2d6efcc5?w=400&h=400&fit=crop',
+    image: 'https://cdn.fynd.com/v2/falling-surf-7c8bb8/fyprod/wrkr/products/pictures/item/free/original/000000000494434929/fhBtXgY_Kw1A-000000000494434929_1.jpg',
     rating: 4.8,
     reviews: 378,
     description: 'Luxurious velvet matte lipstick with rich color',
