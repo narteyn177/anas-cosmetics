@@ -130,7 +130,7 @@ const PRODUCTS = [
     description: 'Buildable mascara for dramatic volume and length',
     availability: 'In Stock',
     sku: 'VM-008',
-    brand: 'L’Oréal',
+    brand: "L’Oréal",
     tags: ['mascara', 'eyes', 'bestseller'],
     discount: 24
   },
@@ -392,7 +392,7 @@ const PRODUCTS = [
     description: 'Delicate eye cream to reduce fine lines',
     availability: 'In Stock',
     sku: 'AAE-024',
-    brand: 'L'Oreal',
+    brand: "L'Oreal'",
     tags: ['skincare', 'eye cream'],
     discount: 23
   },
