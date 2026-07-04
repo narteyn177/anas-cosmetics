@@ -6,17 +6,17 @@ const PRODUCTS = [
   // FACE - FOUNDATION & CONCEALER
   {
     id: 1,
-    name: 'Luminous Silk Foundation',
+    name: 'Fenty Beauty Pro Filt’r Foundation – 420',
     category: 'Foundation',
     price: 48.00,
     oldPrice: 58.00,
-    image: 'https://images.unsplash.com/photo-1516975080664-ed2fc6a32937?w=400&h=400&fit=crop',
+    image: 'https://www.temptalia.com/wp-content/uploads/2018/06/fenty-beauty_420_001_product.jpg',
     rating: 4.8,
     reviews: 342,
     description: 'Luxurious foundation with silk-like finish for all skin types',
     availability: 'In Stock',
     sku: 'LSF-001',
-    brand: 'Ana\'s Cosmetics',
+    brand: 'Fenty Beauty',
     tags: ['foundation', 'face', 'bestseller'],
     discount: 17
   },
