@@ -8,23 +8,23 @@
    ======================================== */
 
 :root {
-  /* Primary Colors - Luxury Palette */
-  --primary-dark: #1a1a1a;
+  /* Primary Colors - Premium Light Theme */
+  --primary-dark: #222222;
   --primary-light: #ffffff;
-  --accent-gold: #d4af37;
-  --accent-rose: #e8b4c8;
-  --accent-blush: #f5e6e0;
+  --accent-gold: #d4a574;
+  --accent-rose: #e8c1d1;
+  --accent-blush: #fef5f7;
   
   /* Secondary Colors */
-  --secondary-purple: #8b5a8e;
-  --secondary-sage: #7a9b8e;
-  --secondary-cream: #faf8f6;
+  --secondary-purple: #6366f1;
+  --secondary-sage: #8b9a8e;
+  --secondary-cream: #fafafa;
   
   /* Neutral Colors */
-  --neutral-dark: #2a2a2a;
-  --neutral-gray: #6b6b6b;
+  --neutral-dark: #222222;
+  --neutral-gray: #666666;
   --neutral-light-gray: #e8e8e8;
-  --neutral-border: #d9d9d9;
+  --neutral-border: #e0e0e0;
   
   /* Status Colors */
   --success: #4caf50;
@@ -85,12 +85,12 @@
 /* Dark Mode */
 html[data-theme="dark"] {
   --primary-dark: #ffffff;
-  --primary-light: #1a1a1a;
-  --secondary-cream: #2a2a2a;
-  --neutral-dark: #e8e8e8;
-  --neutral-gray: #b0b0b0;
-  --neutral-light-gray: #3a3a3a;
-  --neutral-border: #4a4a4a;
+  --primary-light: #0f172a;
+  --secondary-cream: #1e293b;
+  --neutral-dark: #e2e8f0;
+  --neutral-gray: #94a3b8;
+  --neutral-light-gray: #334155;
+  --neutral-border: #475569;
 }
 
 /* ========================================
